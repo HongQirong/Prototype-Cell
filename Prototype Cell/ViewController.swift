@@ -11,15 +11,21 @@ import UIKit
 class ViewController: UIViewController {
     var receiveStr: String!
 
+    @IBOutlet weak var photo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         if receiveStr == "usa"{
-            let image = UIImage(named: "usa_icon")
-            var imageView = UIImageView(image:image)
-            imageView.frame = view.bounds
-            imageView.contentMode = .scaleAspectFit
-            imageView.center = view.center
-            view.addSubview(imageView)
+            
+            photo.image = #imageLiteral(resourceName: "usa_icon")
+            
+        }else if receiveStr == "taiwan"{
+            photo.image = #imageLiteral(resourceName: "taiwan_icon")
+        }else if receiveStr == "japan"{
+            photo.image = #imageLiteral(resourceName: "japan_icon")
+        }else if receiveStr == "austrlia"{
+            photo.image = #imageLiteral(resourceName: "austrlia_icon")
+        }else if receiveStr == "singapore"{
+            photo.image = #imageLiteral(resourceName: "singapore_icon")
         }
         
 

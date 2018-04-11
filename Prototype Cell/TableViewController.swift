@@ -13,6 +13,7 @@ class TableViewController: UITableViewController {
     var names = ["usa", "taiwan", "japan", "austrlia", "singapore"]
     var imgs = ["usa_icon", "taiwan_icon", "japan_icon", "austrlia_icon", "singapore_icon"]
     var location = ["new york", "taipei", "tokyo", "sydney", "singapore"]
+    var type = ["1", "2", "3", "4", "5"]
 
     
     override func didReceiveMemoryWarning() {
@@ -37,6 +38,7 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCell
         cell.nameLabel?.text = names[indexPath.row]
         cell.locationLabel?.text = location[indexPath.row]
+        cell.typeLabel?.text = type[indexPath.row]
         cell.thumbnailImageView?.image = UIImage(named: imgs[indexPath.row])
         
         return cell
